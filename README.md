@@ -5,8 +5,8 @@ Dieses Repository enthält die Ergebnisse und den Code unserer Zeitreihenanalyse
 
 ## Team
 - Fabian Niebelschütz
-- Andrew [Nachname]
-- Kai [Nachname]
+- Andrew Barnhoorn
+- Kai Hufnagel
 
 ## Projektbeschreibung
 In diesem Projekt führen wir eine umfassende Zeitreihenanalyse durch, um [kurze Beschreibung des Ziels, z.B. "Muster und Trends in wirtschaftlichen Daten zu identifizieren und Prognosemodelle zu entwickeln"]. Die Analyse umfasst verschiedene statistische Methoden und Visualisierungstechniken, angewendet auf drei unterschiedliche Zeitreihen:
