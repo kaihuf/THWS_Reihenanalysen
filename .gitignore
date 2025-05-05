@@ -1,0 +1,66 @@
+# Excel Dateien
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+*.xltx
+*.xltm
+*.xlam
+
+# CSV Dateien
+*.csv
+
+# Bilddateien
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.svg
+*.webp
+
+# PDF Dateien
+*.pdf
+
+# Temporäre Dateien
+*.tmp
+*.temp
+~$*
+
+# Log Dateien
+*.log
+
+# Datenbank Dateien
+*.db
+*.sqlite
+*.sqlite3
+
+# Komprimierte Archive
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor spezifische Dateien
+.vscode/
+.idea/
+*.sublime-*
+.vs/
+
+# Konfigurationsdateien mit sensiblen Daten
+*.env
+config.local.*
+secrets.*
+
+# Abhängigkeiten und Build-Verzeichnisse
+/node_modules/
+/dist/
+/build/
+/vendor/
