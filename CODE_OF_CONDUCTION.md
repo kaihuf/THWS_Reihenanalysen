@@ -12,7 +12,6 @@ Wir arbeiten mit folgender Branch-Struktur:
 
 ### Workflow-Regeln
 1. Jedes Teammitglied arbeitet ausschließlich in seinem eigenen Feature-Branch.
-2. Code darf nur über Pull Requests in den develop-Branch integriert werden.
-3. Der develop-Branch wird nur in den main-Branch gemergt, wenn alle Features vollständig getestet sind.
-4. Vor jedem Merge in develop muss der eigene Branch aktualisiert werden (`git pull origin develop`).
-5. Commit-Nachrichten müssen aussagekräftig sein und den Inhalt der Änderung kurz beschreiben.
+2. Der develop-Branch wird nur in den main-Branch gemergt, wenn alle Features vollständig getestet sind.
+3. Vor jedem Merge in develop muss der eigene Branch aktualisiert werden (`git pull origin develop`).
+4. Commit-Nachrichten müssen aussagekräftig sein und den Inhalt der Änderung kurz beschreiben.
