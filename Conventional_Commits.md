@@ -107,7 +107,3 @@ Gemäß unserem Code of Conduct befolgen wir folgende Branching-Strategie:
 4. Bei komplexen Änderungen sollte ein ausführlicher Body verwendet werden
 5. Footer können genutzt werden, um auf Issues zu verweisen (Refs: #123)
 6. Commit früh und oft mit klaren, spezifischen Änderungen
-
----
-
-*Diese Konvention basiert auf [Conventional Commits](https://www.conventionalcommits.org/)*
