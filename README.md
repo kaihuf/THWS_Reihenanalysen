@@ -47,13 +47,14 @@ flowchart TD
     P1S2 --> P1S3["Auf leere Stellen prüfen"]
     P1S3 --> P1S4["Dividendenzeilen entfernen"]
     
-    P1S4 --> P2["2. Prüfen auf Stationarität\nder Originaldaten"]
+    P1S4 --> P2["2. Stationaritätstests"]
     P2 --> P2S1["ADF-Test"]
     P2 --> P2S2["PP-Test"]
     P2 --> P2S3["KPSS-Test"]
     P2S1 & P2S2 & P2S3 --> P2S4["Ergebnis: Meist nicht stationär"]
     
     P2S4 --> P3["3. Transformation zur Stationarität"]
+    
     P3 --> P3S1["Differenzierung 1. und 2. Ordnung"]
     P3 --> P3S2["Log. Transformation"]
     P3 --> P3S3["Log. differenzierte Transformation"]
@@ -61,19 +62,19 @@ flowchart TD
     P3 --> P3S5["Simple exponential smoothing"]
     P3 --> P3S6["HP-Filter"]
     
-    P3S1 & P3S2 & P3S3 & P3S4 & P3S5 & P3S6 --> P3S7["Erneute Stationaritätstests\n(ADF, PP, KPSS)"]
+    P3S1 & P3S2 & P3S3 & P3S4 & P3S5 & P3S6 --> P3S7["Erneute Stationaritätstests"]
     P3S7 --> P3S8["Beste Transformation auswählen"]
     
-    P3S8 --> P4["4. Korrelation testen"]
+    P3S8 --> P4["4. Korrelationsanalyse"]
     P4 --> P4S1["ACF berechnen"]
     P4 --> P4S2["PACF berechnen"]
     P4S1 & P4S2 --> P4S3["Interpretation der Ergebnisse"]
     
     P4S3 --> P5["5. Modellspezifikationen"]
     P5 --> P5S1["Auto-ARIMA Funktion anwenden"]
-    P5S1 --> P5S2["Ergebnis interpretieren"]
+    P5S1 --> P5S2["Ergebnisse interpretieren"]
     P5S2 --> P5S3["Moving Average aufbauen"]
-    P5S3 --> P5S4["K-Fold für verschiedene\nModelle durchlaufen"]
+    P5S3 --> P5S4["K-Fold für verschiedene Modelle"]
     
     class P1,P2,P3,P4,P5 phase
     class P1S1,P1S2,P1S3,P1S4,P2S1,P2S2,P2S3,P2S4,P3S1,P3S2,P3S3,P3S4,P3S5,P3S6,P3S7,P3S8,P4S1,P4S2,P4S3,P5S1,P5S2,P5S3,P5S4 step
