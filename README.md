@@ -37,40 +37,4 @@ In diesem Projekt führen wir eine umfassende Zeitreihenanalyse durch, um [kurze
 
 ## Zeitreihenanalyse-Prozess
 
-```mermaid
-flowchart TD
-    A["1. Data Preparation"] --> B["2. Stationaritätstests"]
-    B --> C["3. Transformation zur Stationarität"]
-    C --> D["4. Korrelationsanalyse"]
-    D --> E["5. Modellspezifikationen"]
-    
-    subgraph prep ["Preparation"]
-    A1["Datensatz laden"] --> A2["Jahreszahl ermitteln"]
-    A2 --> A3["Leere Stellen prüfen"]
-    A3 --> A4["Dividendenzeilen entfernen"]
-    end
-    
-    subgraph tests ["Tests"]
-    B1["ADF-Test"] 
-    B2["PP-Test"]
-    B3["KPSS-Test"]
-    end
-    
-    subgraph trans ["Transformationen"]
-    C1["Differenzierung"]
-    C2["Log. Transformation"]
-    C3["Log. differenzierte Transform."]
-    C4["Moving average"]
-    C5["Exponential smoothing"]
-    C6["HP-Filter"]
-    end
-    
-    A --> prep
-    B --> tests
-    C --> trans
-    
-    style prep fill:#d4f1f9,stroke:#333
-    style tests fill:#ffeecc,stroke:#333
-    style trans fill:#e1d5e7,stroke:#333
-```
-
+*kommt noch*
