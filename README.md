@@ -39,44 +39,38 @@ In diesem Projekt führen wir eine umfassende Zeitreihenanalyse durch, um [kurze
 
 ```mermaid
 flowchart TD
-    classDef phase fill:#f9f9f9,stroke:#333,stroke-width:2px
-    classDef step fill:white,stroke:#666,stroke-width:1px
+    A["1. Data Preparation"] --> B["2. Stationaritätstests"]
+    B --> C["3. Transformation zur Stationarität"]
+    C --> D["4. Korrelationsanalyse"]
+    D --> E["5. Modellspezifikationen"]
     
-    P1["1. Data Preparation"] --> P1S1["Datensatz laden (Closing)"]
-    P1S1 --> P1S2["Maximale Jahreszahl ermitteln"]
-    P1S2 --> P1S3["Auf leere Stellen prüfen"]
-    P1S3 --> P1S4["Dividendenzeilen entfernen"]
+    subgraph prep ["Preparation"]
+    A1["Datensatz laden"] --> A2["Jahreszahl ermitteln"]
+    A2 --> A3["Leere Stellen prüfen"]
+    A3 --> A4["Dividendenzeilen entfernen"]
+    end
     
-    P1S4 --> P2["2. Stationaritätstests"]
-    P2 --> P2S1["ADF-Test"]
-    P2 --> P2S2["PP-Test"]
-    P2 --> P2S3["KPSS-Test"]
-    P2S1 & P2S2 & P2S3 --> P2S4["Ergebnis: Meist nicht stationär"]
+    subgraph tests ["Tests"]
+    B1["ADF-Test"] 
+    B2["PP-Test"]
+    B3["KPSS-Test"]
+    end
     
-    P2S4 --> P3["3. Transformation zur Stationarität"]
+    subgraph trans ["Transformationen"]
+    C1["Differenzierung"]
+    C2["Log. Transformation"]
+    C3["Log. differenzierte Transform."]
+    C4["Moving average"]
+    C5["Exponential smoothing"]
+    C6["HP-Filter"]
+    end
     
-    P3 --> P3S1["Differenzierung 1. und 2. Ordnung"]
-    P3 --> P3S2["Log. Transformation"]
-    P3 --> P3S3["Log. differenzierte Transformation"]
-    P3 --> P3S4["Moving average"]
-    P3 --> P3S5["Simple exponential smoothing"]
-    P3 --> P3S6["HP-Filter"]
+    A --> prep
+    B --> tests
+    C --> trans
     
-    P3S1 & P3S2 & P3S3 & P3S4 & P3S5 & P3S6 --> P3S7["Erneute Stationaritätstests"]
-    P3S7 --> P3S8["Beste Transformation auswählen"]
-    
-    P3S8 --> P4["4. Korrelationsanalyse"]
-    P4 --> P4S1["ACF berechnen"]
-    P4 --> P4S2["PACF berechnen"]
-    P4S1 & P4S2 --> P4S3["Interpretation der Ergebnisse"]
-    
-    P4S3 --> P5["5. Modellspezifikationen"]
-    P5 --> P5S1["Auto-ARIMA Funktion anwenden"]
-    P5S1 --> P5S2["Ergebnisse interpretieren"]
-    P5S2 --> P5S3["Moving Average aufbauen"]
-    P5S3 --> P5S4["K-Fold für verschiedene Modelle"]
-    
-    class P1,P2,P3,P4,P5 phase
-    class P1S1,P1S2,P1S3,P1S4,P2S1,P2S2,P2S3,P2S4,P3S1,P3S2,P3S3,P3S4,P3S5,P3S6,P3S7,P3S8,P4S1,P4S2,P4S3,P5S1,P5S2,P5S3,P5S4 step
+    style prep fill:#d4f1f9,stroke:#333
+    style tests fill:#ffeecc,stroke:#333
+    style trans fill:#e1d5e7,stroke:#333
 ```
 
