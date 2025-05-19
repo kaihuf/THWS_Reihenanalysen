@@ -2,7 +2,7 @@
 
 ## Einleitung
 
-Ziel dieser Analyse ist es, ein geeignetes ARIMA-Modell zu finden, das den zugrunde liegenden datengenerierenden Prozess einer Finanzzeitreihe (z. B. Aktienkurs) möglichst realitätsnah abbildet. Die Analyse erfolgt nach der **Box-Jenkins-Methode**, einem etablierten Verfahren zur Modellierung, Auswahl und Prognose von Zeitreihen.
+Ziel dieser Analyse ist es, ein geeignetes ARIMA-Modell zu finden, das den zugrunde liegenden datengenerierenden Prozess einer Finanzzeitreihe (z. B. Aktienkurs) möglichst realitätsnah abbildet. 
 
 ### Was ist eine Zeitreihe?
 
@@ -74,10 +74,10 @@ Der Phillips-Perron-Test ist eine weitere Methode zur Prüfung auf Einheitwurzel
 
 **Testidee:**  
 PP erweitert das klassische Dickey–Fuller-Modell  
-$
+$$
 \Delta y_t = \alpha + \beta t + \gamma\,y_{t-1} + \varepsilon_t
-$
-um eine semi-nonparametrische Korrektur der Teststatistik, um mögliche Autokorrelation und Heteroskedastizität in den Fehlern $ \varepsilon_t $ zu entfernen, ohne explizit verzögerte Differenzen einzufügen.
+$$
+um eine semi-nonparametrische Korrektur der Teststatistik, um mögliche Autokorrelation und Heteroskedastizität in den Fehlern$\varepsilon_t$zu entfernen, ohne explizit verzögerte Differenzen einzufügen.
 
 **Teststatistik:**  
 $$
@@ -108,11 +108,11 @@ Um die ursprüngliche Reihe in eine stationäre zu überführen, wenden wir mehr
 
 | Transformation                        | Zweck |
 |--------------------------------------|-------|
-| **1. Differenzierung**:  $$ y_t - y_{t-1} $$  | Entfernt lineare Trends |
-| **2. Differenzierung**: $$ (y_t - y_{t-1}) - (y_{t-1} - y_{t-2}) $$ | Entfernt quadratische/komplexere Trends |
-| **Logarithmierung**: $$ \log(y_t) $$ | Stabilisiert Varianz (z. B. bei exponentiellem Wachstum) |
-| **Log-Differenz**: $$ \log(y_t) - \log(y_{t-1}) $$ | Kombiniert Trendentfernung und Varianzstabilisierung |
-| **Moving Average Residuum**: $$ y_t - \overline{y}_{t,window} $$ | Entfernt gleitenden Mittelwert (Trend) |
+| **1. Differenzierung**:  $y_t - y_{t-1}$  | Entfernt lineare Trends |
+| **2. Differenzierung**: $(y_t - y_{t-1}) - (y_{t-1} - y_{t-2})$ | Entfernt quadratische/komplexere Trends |
+| **Logarithmierung**: $\log(y_t)$ | Stabilisiert Varianz (z. B. bei exponentiellem Wachstum) |
+| **Log-Differenz**: $\log(y_t) - \log(y_{t-1})$ | Kombiniert Trendentfernung und Varianzstabilisierung |
+| **Moving Average Residuum**: $y_t - \overline{y}_{t,window}$ | Entfernt gleitenden Mittelwert (Trend) |
 | **Exponentielle Glättung** | Entfernt Trend mit höherem Gewicht auf jüngere Werte |
 | **HP-Filter (Hodrick-Prescott)** | Trennt Trend- und Zykluskomponente der Reihe |
 
@@ -139,9 +139,9 @@ Dies erlaubt eine schnelle visuelle und numerische Bewertung jeder Transformatio
 
 Zur systematischen Auswahl verwenden wir eine **Scoring-Funktion**, die beide Tests kombiniert:
 
-$
+$$
 \text{Stationaritätsscore} = p_{\text{ADF}} + (1 - p_{\text{KPSS}})
-$
+$$
 
 - Ziel: **Minimaler Score**
 - Begründung: Kleine ADF-p-Werte + große KPSS-p-Werte → stationär
@@ -150,37 +150,17 @@ Der Name und die Serie der „besten Transformation“ werden gespeichert.
 
 ---
 
-###  Rolling-Statistiken und ACF: Visuelle Stationaritätsprüfung
-
-Wir berechnen und visualisieren:
-
-- **Rolling Mean** (Gleitender Durchschnitt, Fenster = 20 Tage)
-- **Rolling Standard Deviation**
-- **ACF-Werte bei Lag 1 & 2**
-
-Ziel: Stationäre Reihen haben **konstante Mittelwerte und Varianzen**, und die ACF fällt schnell ab.
-
-Für jede Transformation:
-
-```python
-rolling_mean = series.rolling(window=20).mean()
-rolling_std = series.rolling(window=20).std()
-acf_vals = acf(series, nlags=2)
-```
-
----
-
 ###  ACF- und PACF-Plots
 
 Für zwei zentrale Reihen (beste Transformation + Log-Differenz) erstellen wir **ACF- und PACF-Plots mit Konfidenzintervallen**.
 
 #### ACF (Autokorrelationsfunktion):
-Zeigt Korrelation von $ y_t $ mit $ y_{t-k} $. Wichtig für MA-Komponente im ARIMA(p, d, q).
+Zeigt Korrelation von $y_t$ mit $y_{t-k}$. Wichtig für MA-Komponente im ARIMA(p, d, q).
 
 #### PACF (Partielle Autokorrelationsfunktion):
-Zeigt "direkten" Effekt des Lags $ k $ auf $ y_t $, ohne Zwischenschritte. Wichtig für AR-Komponente.
+Zeigt "direkten" Effekt des Lags $k$ auf $y_t$, ohne Zwischenschritte. Wichtig für AR-Komponente.
 
-Signifikante Lags außerhalb der Konfidenzgrenzen $ ±1.96/√n $ deuten auf relevante Modellbestandteile hin.
+Signifikante Lags außerhalb der Konfidenzgrenzen $±1.96/√n$ deuten auf relevante Modellbestandteile hin.
 
 ---
 
@@ -215,10 +195,10 @@ $$
 
 
 Dabei ist:
-- $ y_t $: aktueller Wert der Zeitreihe  
-- $ \phi_i $: AR-Koeffizienten  
-- $ \theta_i $: MA-Koeffizienten  
-- $ \varepsilon_t $: weiße Rauschkomponente (Zufallsfehler)
+-$y_t$: aktueller Wert der Zeitreihe  
+-$\phi_i$: AR-Koeffizienten  
+-$\theta_i$: MA-Koeffizienten  
+-$\varepsilon_t$: weiße Rauschkomponente (Zufallsfehler)
 
 ---
 
@@ -230,12 +210,12 @@ Um das geeignetste Modell zu finden, wurden alle sinnvollen Kombinationen von p,
 
 | Kriterium | Ziel      | Formel (vereinfacht)                      | Bestrafung für Komplexität? |
 |-----------|-----------|-------------------------------------------|------------------------------|
-| **AIC**   | Modellgüte | $$ \text{AIC} = -2 \log(L) + 2k \ $$         | Ja (milder)                  |
-| **BIC**   | Modellgüte | $$ \text{BIC} = -2 \log(L) + k \log(n) \ $$ | Ja (stärker)                 |
+| **AIC**   | Modellgüte | $\text{AIC} = -2 \log(L) + 2k \$         | Ja (milder)                  |
+| **BIC**   | Modellgüte | $\text{BIC} = -2 \log(L) + k \log(n) \$ | Ja (stärker)                 |
 
-- $ \log(L) $: Log-Likelihood des Modells  
-- $ k $: Anzahl der geschätzten Parameter  
-- $ n $: Anzahl der Beobachtungen
+- $\log(L)$: Log-Likelihood des Modells  
+- $k$: Anzahl der geschätzten Parameter  
+- $n$: Anzahl der Beobachtungen
 
 Ziel ist es, ein Modell mit möglichst **niedrigem AIC/BIC** zu finden. Dabei gilt:
 
@@ -336,7 +316,7 @@ Jetzt kehren wir die Transformation wieder um:
 
 1. **Kumulative Summe** der differenzierten Forecasts  
 2. **Addition des letzten Log-Wertes** vor dem Forecast  
-3. **Exponentialfunktion**, um von $ log(X) $ zurück zu $ X $ zu kommen
+3. **Exponentialfunktion**, um von$log(X)$zurück zu$X$zu kommen
 
 > Ergebnis: Ein Forecast der tatsächlichen Preisentwicklung 
 
