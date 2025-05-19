@@ -31,7 +31,7 @@ Dieses Tool ermöglicht es, Aktiendaten zu downloaden und umfassende Analysen du
 
 ### 3. Ergebnisdarstellung
 
-**Was es macht:** Präsentiert die Ergebnisse in leicht verständlichen Zusammenfassungen
+**Was es macht:** Präsentiert die Ergebnisse in leicht verständlichen Zusammenfassungen <br>
 **Nutzen:** Bietet einen klaren Überblick über die Performance und das Risiko der Aktie
 
 
