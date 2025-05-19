@@ -54,9 +54,7 @@ Um Stationarität statistisch zu prüfen, wenden wir zwei komplementäre Tests a
 
 **Testformel:**
 
-$$
-\Delta y_t = \alpha + \beta t + \gamma y_{t-1} + \sum_{i=1}^{p} \delta_i \Delta y_{t-i} + \varepsilon_t
-$$
+$$\Delta y_t = \alpha + \beta t + \gamma y_{t-1} + \sum_{i=1}^{p} \delta_i \Delta y_{t-i} + \varepsilon_t$$
 
 
 #### KPSS-Test (Kwiatkowski-Phillips-Schmidt-Shin)
@@ -74,9 +72,9 @@ Der Phillips-Perron-Test ist eine weitere Methode zur Prüfung auf Einheitwurzel
 
 **Testidee:**  
 PP erweitert das klassische Dickey–Fuller-Modell  
-$$
-\Delta y_t = \alpha + \beta t + \gamma\,y_{t-1} + \varepsilon_t
-$$
+
+$$\Delta y_t = \alpha + \beta t + \gamma\,y_{t-1} + \varepsilon_t$$
+
 um eine semi-nonparametrische Korrektur der Teststatistik, um mögliche Autokorrelation und Heteroskedastizität in den Fehlern$\varepsilon_t$zu entfernen, ohne explizit verzögerte Differenzen einzufügen.
 
 **Teststatistik:**  
@@ -195,10 +193,10 @@ $$
 
 
 Dabei ist:
--$y_t$: aktueller Wert der Zeitreihe  
--$\phi_i$: AR-Koeffizienten  
--$\theta_i$: MA-Koeffizienten  
--$\varepsilon_t$: weiße Rauschkomponente (Zufallsfehler)
+- $y_t$: aktueller Wert der Zeitreihe  
+- $\phi_i$: AR-Koeffizienten  
+- $\theta_i$: MA-Koeffizienten  
+- $\varepsilon_t$: weiße Rauschkomponente (Zufallsfehler)
 
 ---
 
