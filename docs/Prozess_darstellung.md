@@ -1,8 +1,6 @@
 ```mermaid
 classDiagram
 
-!define NAMESPACE_COLOR #lightblue
-
     namespace overall_preparation.ipynb {
         class DataImport {
             +download_stock_data()
