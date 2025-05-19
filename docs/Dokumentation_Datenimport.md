@@ -39,10 +39,10 @@ Dieses Tool ermöglicht es, Aktiendaten zu downloaden und umfassende Analysen du
 
 ### Vorteile
 
-**Zeitersparnis:** Automatisiert komplexe Analyse-Prozesse, die sonst Stunden dauern würden
-**Fundierte Entscheidungen:** Liefert Kennzahlen wie annualisierte Rendite und Volatilität für bessere Investitionsentscheidungen
-**Keine technischen Vorkenntnisse nötig:** Alle Berechnungen laufen im Hintergrund ab
-**Zuverlässige Datenbasis:** Nutzt vertrauenswürdige Quellen für präzise Analysen
+**Zeitersparnis:** Automatisiert komplexe Analyse-Prozesse, die sonst Stunden dauern würden<br>
+**Fundierte Entscheidungen:** Liefert Kennzahlen wie annualisierte Rendite und Volatilität für bessere Investitionsentscheidungen<br>
+**Keine technischen Vorkenntnisse nötig:** Alle Berechnungen laufen im Hintergrund ab<br>
+**Zuverlässige Datenbasis:** Nutzt vertrauenswürdige Quellen für präzise Analysen<br>
 
 ### Anwendungsbeispiel
 Ein Beispiel mit Microsoft-Aktien über 5 Jahre würde:
