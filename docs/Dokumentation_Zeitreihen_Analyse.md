@@ -43,7 +43,7 @@ Ein zentrales Ziel bei der Zeitreihenanalyse mit ARIMA-Modellen ist die Identifi
 
 ###  Datenimport & Visualisierung der Originalreihe
 
-Wir importieren zunächst die Aktienkurs-Zeitreihe von Samsung („Adjusted Close“-Preise), konvertieren das Datum in ein geeignetes Format und erstellen eine erste Visualisierung der ursprünglichen, **nicht transformierten** Zeitreihe.
+Wir importieren zunächst die Aktienkurs-Zeitreihe von Samsung, Daimler und Microsoft („Adjusted Close“-Preise), konvertieren das Datum in ein geeignetes Format und erstellen eine erste Visualisierung der ursprünglichen, **nicht transformierten** Zeitreihe.
 
 
 **Beobachtung:**  
