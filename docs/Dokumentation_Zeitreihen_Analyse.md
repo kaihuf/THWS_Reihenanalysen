@@ -70,26 +70,6 @@ Der Phillips-Perron-Test ist eine weitere Methode zur Prüfung auf Einheitwurzel
 - **Alternativhypothese (H₁):** Stationarität liegt vor  
 - Wir lehnen H₀ ab, wenn der **p-Wert < 0.05**
 
-**Testidee:**  
-PP erweitert das klassische Dickey–Fuller-Modell  
-
-$$\Delta y_t = \alpha + \beta t + \gamma\,y_{t-1} + \varepsilon_t$$
-
-um eine semi-nonparametrische Korrektur der Teststatistik, um mögliche Autokorrelation und Heteroskedastizität in den Fehlern$\varepsilon_t$zu entfernen, ohne explizit verzögerte Differenzen einzufügen.
-
-**Teststatistik:**  
-$$
-Z_{\rho} = T\big(\hat{\rho}-1\big) - \tfrac{1}{2} \;\frac{\hat{\sigma}^2_{\Delta\varepsilon}}{\hat{\sigma}^2_{\varepsilon}}
-$$  
-wobei  
-
-$\hat{\rho}$ der geschätzte AR-Parameter ist,  
-- $\hat{\sigma}^2_{\varepsilon}$ die Varianz der Roh-Residuen und  
-- $\hat{\sigma}^2_{\Delta\varepsilon}$ die Varianz der Residuen-Differenzen (korrigiert um serielle Korrelation)
-
-**Vorteil gegenüber ADF:**  
-Keine manuelle Wahl der Verzögerungen \(p\) nötig – die Korrektur erfolgt implizit über eine Newey-West-artige Schätzung.
-
 **Praxis-Tipp:**  
 Vergleiche PP- und ADF-Ergebnisse: Wenn beide zu ähnlichen Entscheidungen kommen, erhöhst Du das Vertrauen in das Testergebnis.
 
