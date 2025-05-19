@@ -55,7 +55,7 @@ Die ursprüngliche Zeitreihe zeigt visuell einen starken Trend – sowohl auf- a
 
 Um Stationarität statistisch zu prüfen, wenden wir zwei komplementäre Tests an:
 
-#### 🔹 Augmented Dickey-Fuller-Test (ADF)
+#### Augmented Dickey-Fuller-Test (ADF)
 - **Nullhypothese (H₀):** Die Zeitreihe hat eine Einheitwurzel → *nicht stationär*
 - **Alternativhypothese (H₁):** Stationarität liegt vor
 - Wir lehnen H₀ ab, wenn der **p-Wert < 0.05**
@@ -67,12 +67,12 @@ $$
 $$
 
 
-#### 🔹 KPSS-Test (Kwiatkowski-Phillips-Schmidt-Shin)
+#### KPSS-Test (Kwiatkowski-Phillips-Schmidt-Shin)
 - **Nullhypothese (H₀):** Die Zeitreihe ist stationär (gegen Trendstationarität)
 - **Alternativhypothese (H₁):** Die Zeitreihe ist nicht stationär
 - Wir behalten H₀ bei, wenn **p-Wert > 0.05**
 
-#### 🔹 Phillips-Perron-Test (PP)
+#### Phillips-Perron-Test (PP)
 
 Der Phillips-Perron-Test ist eine weitere Methode zur Prüfung auf Einheitwurzeln und ähnelt dem ADF, berücksichtigt aber heteroskedastische und serielle Korrelation in den Residuen auf flexible Weise.
 
@@ -330,18 +330,6 @@ Wenn z. B. die Zeitreihe 1000 Werte hat, ergibt sich bei 80 % Training und 2
 
 
 
-## Darstellungen unserer Vorhersagen
-
-### **Daimler**
-![Daimler](/data_analytics/ergebnisse/daimler_unified_time_series_stock_price_plot.png)
-
-### **Microsoft**
-![Microsoft](/data_analytics/ergebnisse/microsoft_unified_time_series_stock_price_plot.png)
-
-### **Samsung**
-![Samsung](/data_analytics/ergebnisse/samsung_unified_time_series_stock_price_plot.png)
-
-
 ##  Schritt 4: Rolling Forecasts auf Originalskala (zurücktransformiert)
 
 Nachdem wir ein geeignetes ARIMA-Modell trainiert und erste Forecasts durchgeführt haben, folgt nun der **entscheidende Praxisschritt**:  
@@ -398,6 +386,20 @@ Ein Plot pro Stufe zeigt:
 - Wo es z. B. **zu langsam reagiert**
 
 Die letzte Grafik (100 %) zeigt die echte **Zukunftsprognose** – also was wir erwarten würden, wenn der bisherige Verlauf anhielte.
+
+
+---
+
+## Darstellungen unserer Vorhersagen
+
+### **Daimler**
+![Daimler](/data_analytics/ergebnisse/daimler_unified_time_series_stock_price_plot.png)
+
+### **Microsoft**
+![Microsoft](/data_analytics/ergebnisse/microsoft_unified_time_series_stock_price_plot.png)
+
+### **Samsung**
+![Samsung](/data_analytics/ergebnisse/samsung_unified_time_series_stock_price_plot.png)
 
 ---
 
