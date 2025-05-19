@@ -20,7 +20,7 @@ classDiagram
         }
         
         class TransformationZurStationarität {
-            +stationaritaets_transformationen()
+            +stationaritaets_transformationen
             +Differenzierung
             +Erste Differenz
             +Zweite Differenz
