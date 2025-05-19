@@ -8,14 +8,6 @@ Ziel dieser Analyse ist es, ein geeignetes ARIMA-Modell zu finden, das den zugru
 
 Eine **Zeitreihe** ist eine Folge von Beobachtungen, die in regelmäßigen Abständen über die Zeit hinweg aufgezeichnet wird – beispielsweise tägliche Aktienkurse oder monatliche Arbeitslosenzahlen. Der Zweck der Zeitreihenanalyse ist es, **Strukturen wie Trends, Saisonalität und Autokorrelationen zu identifizieren**, um präzise Prognosen für zukünftige Werte zu erstellen.
 
-### Warum Box-Jenkins?
-
-Die **Box-Jenkins-Methode** konzentriert sich auf die Klasse der **ARIMA-Modelle (AutoRegressive Integrated Moving Average)**. Diese Modelle sind besonders flexibel und leistungsfähig, wenn es darum geht, komplexe Zeitreihenprozesse ohne klare saisonale Struktur zu modellieren. Die Methodik umfasst drei zentrale Schritte:
-
-1. **Identifikation** des Modells (z. B. Wahl der ARIMA-Ordnung),
-2. **Schätzung** der Modellparameter,
-3. **Diagnoseprüfung** der Modellgüte.
-
 
 ### Ziel dieser Arbeit
 
@@ -51,7 +43,7 @@ Die ursprüngliche Zeitreihe zeigt visuell einen starken Trend – sowohl auf- a
 
 ---
 
-###  Stationaritätstests: ADF und KPSS
+###  Stationaritätstests: ADF, PP und KPSS
 
 Um Stationarität statistisch zu prüfen, wenden wir zwei komplementäre Tests an:
 
