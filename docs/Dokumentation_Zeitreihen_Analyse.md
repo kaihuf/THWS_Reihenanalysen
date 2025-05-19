@@ -160,6 +160,18 @@ Zeigt "direkten" Effekt des Lags $k$ auf $y_t$, ohne Zwischenschritte. Wichtig f
 
 Signifikante Lags außerhalb der Konfidenzgrenzen $±1.96/√n$ deuten auf relevante Modellbestandteile hin.
 
+
+### ACF und PACF Visulaliserungs Ergebniss
+
+#### Daimler:
+![Daimler](/data_analytics/ergebnisse/daimler_log_diff_acf_pacf_statsmodels.png)
+
+#### Microsoft:
+![Microsoft](/data_analytics/ergebnisse/microsoft_log_diff_acf_pacf_statsmodels.png)
+
+#### Samsung:
+![Samsung](/data_analytics/ergebnisse/samsung_log_diff_acf_pacf_statsmodels.png)
+
 ---
 
 ##  Fazit Schritt 1
