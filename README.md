@@ -11,9 +11,9 @@ Dieses Repository enthält die Ergebnisse und den Code unserer Zeitreihenanalyse
 ## Projektbeschreibung
 In diesem Projekt führen wir eine umfassende Zeitreihenanalyse durch, um [kurze Beschreibung des Ziels, z.B. "Muster und Trends in wirtschaftlichen Daten zu identifizieren und Prognosemodelle zu entwickeln"]. Die Analyse umfasst verschiedene statistische Methoden und Visualisierungstechniken, angewendet auf drei unterschiedliche Zeitreihen:
 
-1. **Samsung**:
-2. **Daimler**:
-3. **Microsoft**:
+1. **Samsung**: 005930.ks_aktien_daten
+2. **Daimler**: mbg.de_aktien_daten
+3. **Microsoft**: msft_aktien_daten
 
 ## Inhalte
 - `data/`: Enthält die für die Analyse verwendeten Datensätze
