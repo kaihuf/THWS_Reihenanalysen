@@ -1,8 +1,6 @@
 ```mermaid
 classDiagram
 
-!define NAMESPACE_COLOR #lightblue
-
     namespace overall_preparation.ipynb {
         class DataImport {
             +download_stock_data()
@@ -28,8 +26,8 @@ classDiagram
             +Zweite Differenz
             +Logarithmische Transformation
             +Moving Average
-            +Simple Exponential Smoothing
             +HP-Filter (Hodrick-Prescott-Filter)
+            +Simple Exponential Smoothing
         }
         
         class TransformationenAufStationaritätTesten {
@@ -52,7 +50,7 @@ classDiagram
         
         class Modelliagnose {
             +residual_analysis()
-            +Ljung-Box Test (Portmanteau Test)
+            +Ljung-Box Test / Portmanteau Test
             +Jarque-Bera Test
             +Residuenanalyse
         }
