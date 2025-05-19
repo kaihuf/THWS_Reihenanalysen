@@ -36,16 +36,21 @@ classDiagram
         
         class ACFundPACFAnalyse {
             +acf_pacf_werte()
+            +visualisiere_acf_pacf()
             +ACF
             +PACF
         }
         
         class AutoARIMAModell {
             +auto_arima_simple()
+            +SimpleARIMA()
         }
         
         class BerechnenDerNächstenPerioden {
             +auto_arima_simple()
+            +EnhancedSimpleARIMA()
+            +create_unified_dataset_from_dict()
+            +transform_to_stock_price()
         }
         
         class Modelliagnose {
