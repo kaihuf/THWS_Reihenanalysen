@@ -28,7 +28,7 @@ In diesem Projekt führen wir eine umfassende Zeitreihenanalyse durch, um [kurze
   - `Zeitreihe_Fabian_analysis/`: Zeitreihenanalyse für Fabian's Zeitreihe
   - `Zeitreihe_Kai_analysis/`: Zeitreihenanalyse für Kai's Zeitreihe
 - `data_preparation/`: Jupyter Notebooks mit der durchgeführten Preparations
-  - `overall_preparation`: Die allgemeine Preparation über alle Zeitreihen hinweg
+  - `overall_preparation`: Die allgemeine Preparation über alle Zeitreihen hinweg (Muss ausgeführt werden, bevor die overall_analysis durchgeführt wird)
   - `zeitreihe_Andrew_preparation`: Datenvorbereitung der ersten Zeitreihe
   - `zeitreihe_Fabian_preparation`: Datenvorbereitung der zweiten Zeitreihe
   - `zeitreihe_Kai_preparation`: Datenvorbereitung der driten Zeitreihe
