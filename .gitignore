@@ -13,7 +13,6 @@
 # Bilddateien
 *.jpg
 *.jpeg
-*.png
 *.gif
 *.bmp
 *.tif
